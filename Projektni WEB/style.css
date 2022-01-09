@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0 25px;
+}
+
+/*HEADER*/
+/*#region*/
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header video {
+    overflow: hidden;
+    width: 100%;
+    height: 85%;
+    bottom: 0;
+}
+
+header .video_overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    bottom: 10px;
+    z-index: 1;
+    padding-left: 50px;
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+/*#endregion*/
+
+/*NAVBAR*/
+/*#region*/
+#menu {
+    top: 0;
+    position: sticky;
+    background: #000000;
+    color: #fff;
+    height: 60px;
+    padding-left: 18px;
+    border-radius: 0px;
+}
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li a img {
+    display: block;
+    margin: auto;
+}
+
+#menu ul {
+    width: 100%;
+}
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+}
+#menu a {
+    display: block;
+    line-height: 60px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+#menu a.dropdown-arrow:after {
+    content: "\23F7";
+    margin-left: 5px;
+}
+#menu li a:hover {
+    color: #050300;
+    background: #f2f2f2;
+}
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+#menu label {
+    display: none;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    left: 35px;
+}
+#menu label:before {
+    font-size: 1.6em;
+    content: "\2261";
+    margin-left: 20px;
+}
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #000000;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+#menu ul.sub-menus li {
+    display: block;
+    width: 100%;
+}
+#menu ul.sub-menus a {
+    color: #000000;
+    font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+    display: block;
+}
+#menu ul.sub-menus a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/*#endregion*/
+
+/*MAIN*/
+/*#region*/
+.sekcija {
+    width: 100%;
+    height: 90vh;
+}
+
+.sekcija .news_coming{
+    display: flex;
+    flex-direction: column;
+}
+
+.sekcija .news_coming img{
+    width: 50%;
+    height: auto;
+}
+
+.sekcija_story figure {
+    float: right;
+    padding-left: 15px;
+}
+
+.sekcija_story figure img {
+    border-radius: 25px;
+    border: white solid 1px;
+}
+
+.sekcija_story p {
+    padding-top: 15px;
+    font-size: 22px;
+}
+
+
+.sekcija_about p {
+    padding-top: 15px;
+    font-size: 22px;
+}
+
+.sekcija_about figure {
+    float: right;
+    padding-left: 15px;
+}
+
+.sekcija_about figure img {
+    border-radius: 25px;
+    border: white solid 1px;
+}
+
+/*#endregion*/
+
+/*GALLERY*/
+/*#region*/
+
+.container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.mySlides img {
+    height: 90vh;
+    width: auto;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 3px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+/*#endregion*/
+
+/*CONTACT form*/
+/*#region*/
+.contact_map {
+    margin: 50px auto;
+    width: 70%;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.contact_flex {
+    display: flex;
+}
+
+form {
+    margin: auto;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+select option {
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 50px;
+    resize: none;
+}
+/*#endregion*/
+
+/*FOOTER*/
+/*#region*/
+
+footer {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+
+/*#endregion*/
+/*RESPONSIVE*/
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative;
+    }
+    #menu ul {
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+    }
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    #menu input {
+        z-index: 4;
+    }
+    #menu input:checked + label {
+        color: white;
+    }
+    #menu input:checked + label:before {
+        content: "\00d7";
+    }
+    #menu input:checked ~ ul {
+        display: block;
+    }
+}

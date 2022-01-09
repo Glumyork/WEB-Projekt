@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- meta elements -->	
+    <title>Elden Ring</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Projektni zadatak">
+    <meta name="keywords" content="Elden Ring RPG FANTASY FromSoftware DS Dark Souls 3 2 1 ">
+    <meta name="author" content="Matej Čavlović">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/title.png">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <nav id='menu' style="z-index: 2;">
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <li><a href='index.html'> <img src="images/logo.png" style="height: 60px; width: 60px; " class="imglogo"></div></a></li>
+            <li><a href='index.html#News'>News</a></li>
+            <li><a href='index.html#Story'>Story</a></li>
+            <li><a href='index.html#Gallery'>Gallery</a></li>
+            <li><a href='index.html#Contact'>Contact</a></li>
+            <li><a href='index.html#About'>About us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+    <br>
+<h2 style="text-align:center; padding-bottom: 15px;"><a href="index_.html">Back to Home page</a></h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+            <img src="images/er5.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+        <img src="images/er4.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+        <img src="images/er3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+        <img src="images/er2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+        <img src="images/er1.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+        <img src="images/er6.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/er5.jpg" style="width:100%" onclick="currentSlide(1)" alt="Church of Elleh">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/er4.jpg" style="width:100%" onclick="currentSlide(2)" alt="Firelink Shrine">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/er3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Boss the Guardian of a Castle">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/er2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Caster Boss">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/er1.jpg" style="width:100%" onclick="currentSlide(5)" alt="New mount system Boss fight">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/er6.jpg" style="width:100%" onclick="currentSlide(6)" alt="High Lord Wolnir">
+        </div>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+    </main>
+    <footer>
+        Copyright &copy; 2021 Matej Čavlović.
+        <a href="https://github.com/Glumyork" target="_blank"><img src="images/github.png" style="height: 20px; width: auto;" title="Github" alt="Github"></a>
+        </footer>
+
+</body>
+
+</html>
